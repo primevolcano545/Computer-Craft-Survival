@@ -1,6 +1,6 @@
 term.clear()
 while true do
-    print("Type Program. (miner, equip, fuel)")
+    print("Type Program. (miner, equip, unequip, fuel)")
     program = read()
     if program == "miner" then
         local fuel = turtle.getFuelLevel()
@@ -40,6 +40,12 @@ while true do
         sleep(5)
         turtle.select(2)
         turtle.refuel()
+    elseif program == "unequip" then
+        print("Please clear slot 1")
+        print("you have 5 seconds")
+        sleep(5)
+        turtle.select(1)
+        turtle.equipLeft()
     end
 end
 
