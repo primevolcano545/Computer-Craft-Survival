@@ -9,7 +9,7 @@ while true do
         print("How far do you want to mine (blocks)")
         blocks = tonumber(read())
         if blocks then
-            if blocks <= fuel/s then
+            if blocks <= fuel/2 then
                 print("Type (start) to mine")
                 start = read()
                 if start == "start" and blocks <= fuel/2 then
