@@ -9,21 +9,25 @@ while true do
         print("How far do you want to mine (blocks)")
         blocks = tonumber(read())
         if blocks then
-            print("Type (start) to mine")
-            start = read()
-            if start == "start" and blocks <= fuel/2 then
-                for i = 1, blocks do
-                    turtle.dig("left")
-                    turtle.digUp("left")
-                    turtle.forward()
+            if blocks <= fuel/s then
+                print("Type (start) to mine")
+                start = read()
+                if start == "start" and blocks <= fuel/2 then
+                    for i = 1, blocks do
+                        turtle.dig("left")
+                        turtle.digUp("left")
+                        turtle.forward()
+                    end
+                    turtle.turnLeft()
+                    turtle.turnLeft()
+                    for i = 1, blocks do
+                        turtle.forward()
+                    end
+                    turtle.turnLeft()
+                    turtle.turnLeft()
                 end
-                turtle.turnLeft()
-                turtle.turnLeft()
-                for i = 1, blocks do
-                    turtle.forward()
-                end
-                turtle.turnLeft()
-                turtle.turnLeft()
+            else
+                print("please type a lower number")
             end
         else
             print("please enter whole number")
