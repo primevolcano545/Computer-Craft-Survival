@@ -1,0 +1,38 @@
+term.clear()
+while true do
+    print("Type Program. (miner, equip, fuel)")
+    program = read()
+    if program == "miner" then
+        local fuel = turtle.getFuelLevel()
+        term.clear()
+        print("fuel: "..tostring(fuel))
+        print("How far do you want to mine (blocks)")
+        blocks = tonumber(read())
+        if blocks then
+            print("Type (start) to mine")
+            start = read()
+            if start == "start" and blocks <= fuel/2 then
+                for i = 1, blocks do
+                    turtle.dig("left")
+                    turtle.digUp("left")
+                    turtle.forward()
+                end
+                turtle.turnLeft()
+                turtle.turnLeft()
+                for i = 1, blocks do
+                    turtle.forward()
+                end
+                turtle.turnLeft()
+                turtle.turnLeft()
+            end
+        else
+            print("please enter whole number")
+        end
+    elseif program == "equip" then
+        turtle.select(1)
+        turtle.equipLeft()
+    elseif program == "fuel" then
+        turtle.select(2)
+        turtle.refuel()
+    end
+end
