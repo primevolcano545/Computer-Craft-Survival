@@ -60,3 +60,6 @@ while true do
     reset_screen()
     sleep(0.1)
 end
+
+
+-- wget https://raw.githubusercontent.com/primevolcano545/Computer-Craft-Survival/main/storage_display.lua
