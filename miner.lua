@@ -42,3 +42,6 @@ while true do
         turtle.refuel()
     end
 end
+
+
+--wget https://raw.githubusercontent.com/primevolcano545/Computer-Craft-Survival/main/miner.lua
