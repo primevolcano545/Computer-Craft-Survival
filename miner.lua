@@ -34,20 +34,20 @@ while true do
         end
     elseif program == "equip" then
         print("put tool in slot 1")
-        print("you have 5 seconds to do this")
-        sleep(5)
+        print("you have 2 seconds to do this")
+        sleep(2)
         turtle.select(1)
         turtle.equipLeft()
     elseif program == "fuel" then
         print("put fuel in slot 1")
-        print("you have 5 seconds to do this")
-        sleep(5)
+        print("you have 2 seconds to do this")
+        sleep(2)
         turtle.select(1)
         turtle.refuel()
     elseif program == "unequip" then
         print("Please clear slot 1")
-        print("you have 5 seconds")
-        sleep(5)
+        print("you have 2 seconds")
+        sleep(2)
         turtle.select(1)
         turtle.equipLeft()
     end
